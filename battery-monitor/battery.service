@@ -1,0 +1,13 @@
+# ~/.config/systemd/user/battery.service
+
+[Unit]
+Description=battery data for discharge cycles
+
+[Service]
+WorkingDirectory=/home/user/Apps/scripts/battery
+ExecStart=/bin/bash /home/user/Apps/scripts/battery/script.sh "/home/user/Apps/scripts/battery/logs/log"
+
+[Install]
+WantedBy=default.target
+
+
